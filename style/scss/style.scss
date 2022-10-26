@@ -1,0 +1,44 @@
+.container{
+    background-color: green;
+    padding:  0px 80px 0px 80px;
+    .box{
+      
+        display: grid;
+        grid-template-columns: 1fr;
+        .box1{
+            color: yellow;
+            font-size:65px;
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            
+        }
+    }
+}
+.form{
+    #form1{
+        height: 32px;
+        width: 290px;
+    }
+    #submit1{
+        height: 38px;
+    }
+}
+.listbox{
+    .listbox1{
+        #list1{
+            height: 32px;
+            width: 290px;
+        }
+        #edit1{
+            height: 38px;
+            background-color: green
+        }
+        #delete1{
+            height: 38px;
+            background-color: red;
+        }
+    }
+}
