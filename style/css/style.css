@@ -24,15 +24,15 @@
   height: 38px;
 }
 
-.listbox .listbox1 #list1 {
+.listbox .listbox1 .list1 {
   height: 32px;
   width: 290px;
 }
-.listbox .listbox1 #edit1 {
+.listbox .listbox1 .edit1 {
   height: 38px;
   background-color: green;
 }
-.listbox .listbox1 #delete1 {
+.listbox .listbox1 .delete1 {
   height: 38px;
   background-color: red;
 }
