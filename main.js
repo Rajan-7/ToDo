@@ -44,6 +44,14 @@ function render(){
                 input.setAttribute('readonly',true)
             })
         })
+
+          // For delete
+          deltask.addEventListener('click',()=>{
+            const deleteindex = arry.indexOf(taskk)
+            arry.splice(deleteindex,1);
+            render();
+            console.log(deleteindex);
+         })
+     })
     
-    })
 }
