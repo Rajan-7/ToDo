@@ -36,7 +36,14 @@ function render(){
         deltask.innerText='remove'
         task.append(input,btnedit,deltask)
 
-        
+         // For edit
+         btnedit.addEventListener('click',()=>{
+            input.removeAttribute('readonly')
+            input.focus()
+            input.addEventListener('blur',()=>{
+                input.setAttribute('readonly',true)
+            })
+        })
     
     })
 }
