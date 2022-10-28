@@ -13,6 +13,30 @@ forms.addEventListener("submit",(event)=>{
     arry.push(newtask);
     forminput.value='';
     // console.log(arry);
+    render();
      
 }
 )
+function render(){
+    const container=document.getElementById('listbox')
+    container.innerHTML='';
+    arry.forEach((taskk)=>{
+
+        const task = document.createElement('div')
+        task.classList.add('listbox1')
+        container.appendChild(task)
+        const input=document.createElement('input');
+        input.classList.add('list1')
+        input.value=taskk.text;
+        const btnedit=document.createElement('button')
+        btnedit.classList.add('edit1')
+        btnedit.innerText='Edit'
+        const deltask=document.createElement('button')
+        deltask.classList.add('delete1')
+        deltask.innerText='remove'
+        task.append(input,btnedit,deltask)
+
+        
+    
+    })
+}
