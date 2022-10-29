@@ -1,8 +1,7 @@
 //To make a or to gget the data from the form using js
-const forms=document.querySelector( "#formid");
+const forms=document.querySelector( "#formid");//getting value from FORM usning its ID
 let arry=[];
 const forminput=document.querySelector("#form1");
-// console.log(forminput,forms);
 //to look if the event is happening or not
 forms.addEventListener("submit",(event)=>{
     event.preventDefault();//to manage data while reloading or refreshin
@@ -13,8 +12,6 @@ forms.addEventListener("submit",(event)=>{
         text:task
     }; 
     arry.push(newtask);
-    forminput.value='';
-    // console.log(arry);
-     
+    forminput.value='';    
 }
 )
