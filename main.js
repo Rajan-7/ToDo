@@ -37,6 +37,7 @@ function render(){
         task.append(input,btnedit,deltask);//combining above input ,btnedit & deltask
 
          // For edit
+         //first removing readonly property & again appending after edit is complete
          btnedit.addEventListener('click',()=>{
             input.removeAttribute('readonly')
             input.focus()
