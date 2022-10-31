@@ -1,5 +1,7 @@
+const  arry =JSON.parse(window.localStorage.getItem('task'))|| [];
+window.addEventListener('load',()=>{
+render();
 const forms=document.querySelector( "#formid");
-let arry=[];
 const forminput=document.querySelector("#form1");
 // console.log(forminput,forms);
 forms.addEventListener("submit",(event)=>{
@@ -11,6 +13,7 @@ forms.addEventListener("submit",(event)=>{
         text:task
     } 
     arry.push(newtask);
+    window.localStorage.setItem('task',JSON.stringify(arry));
     forminput.value='';
     // console.log(arry);
     render();//to call render function
@@ -41,8 +44,11 @@ function render(){
          btnedit.addEventListener('click',()=>{
             input.removeAttribute('readonly')
             input.focus()
+          
             input.addEventListener('blur',()=>{
                 input.setAttribute('readonly',true)
+                taskk.text = input.value;
+                window.localStorage.setItem('task' , JSON.stringify(arry));
             })
         })
 
@@ -50,9 +56,10 @@ function render(){
           deltask.addEventListener('click',()=>{
             const deleteindex = arry.indexOf(taskk)
             arry.splice(deleteindex,1);
+            window.localStorage.setItem('task' , JSON.stringify(arry));
             render();
             console.log(deleteindex);
          })
      })
-    
 }
+})
